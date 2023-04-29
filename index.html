@@ -11,22 +11,30 @@
   <body>
     <main>
       <h1>Numéro 10</h1>
-      <p>INSPIRATION IS A CHOICE, NOT A GIFT.</p>
-      <header>
-        <div class="hamburger-container">
-          <span class="line1"></span>
-          <span class="line2"></span>
-        </div>
+      <section class="title">
+        <p class="slogan">
+          INSPIRATION IS A <span>CHOICE</span>, NOT A <span>GIFT</span>.
+        </p>
+      </section>
+
+      <button class="nav-toggler">
+        <span class="line l1"></span>
+        <span class="line l2"></span>
+        <span class="line l3"></span>
+      </button>
+      <header class="header">
         <nav>
-          <a href="#home">Home</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#contact">Contact</a>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </nav>
       </header>
       <section class="gallery-container">
         <div class="gallery">
           <div class="first-snippet-container">
-            <div class="first-snippet-img"></div>
+            <div class="first-snippet-img img"></div>
             <div class="first-snippet-text">
               <h2>FIRST SNIPPET</h2>
               <h4>Description</h4>
@@ -35,7 +43,7 @@
             </div>
           </div>
           <div class="second-snippet-container">
-            <div class="second-snippet-img"></div>
+            <div class="second-snippet-img img"></div>
             <div class="second-snippet-text">
               <h2>SECOND SNIPPET</h2>
               <h4>Description</h4>
@@ -44,7 +52,7 @@
             </div>
           </div>
           <div class="third-snippet-container">
-            <div class="third-snippet-img"></div>
+            <div class="third-snippet-img img"></div>
             <div class="third-snippet-text">
               <h2>THIRD SNIPPET</h2>
               <h4>Description</h4>
@@ -56,4 +64,5 @@
       </section>
     </main>
   </body>
+  <script src="./script.js"></script>
 </html>
