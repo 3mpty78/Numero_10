@@ -10,22 +10,36 @@ body {
   background: var(--white);
   font-family: "Raleway", sans-serif;
 }
-.title {
+.slogan-container {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 20vh;
   width: 100%;
 }
-h1 {
+.title {
   position: absolute;
+  height: 20vh;
+  display: flex;
+  align-items: start;
+  flex-flow: column nowrap;
+  margin: 0;
+  padding: 50px;
+}
+h1 {
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: lighter;
   font-size: 4.5em;
   color: var(--black);
   width: fit-content;
   padding: 0;
-  margin-left: 20px;
+  margin: 0;
+}
+.description {
+  font-size: 1.5em;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
 }
 .slogan {
   font-size: 2em;
@@ -33,101 +47,42 @@ h1 {
 .slogan span {
   color: var(--blue);
 }
-
-/* STYLE MENU */
-
-/* NAV TOGGLER */
-
-.nav-toggler {
-  position: fixed;
-  z-index: 20;
-  top: 5%;
-  right: 3%;
-  height: 50px;
-  width: 50px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-}
-.line {
-  position: absolute;
-  display: block;
+.separation {
   width: 100%;
-  height: 3px;
-  border-radius: 50px;
-  background: var(--black);
-  transition: transform 0.3s ease-out, opacity 0.1s ease-out;
+  text-align: center;
+  margin: 10vh 0;
 }
-.l1 {
-  transform: translateY(-10px);
-}
-.l3 {
-  transform: translateY(10px);
-}
-.nav-toggler.toggle {
-  position: fixed;
-}
-.nav-toggler.toggle .l1 {
-  transform: translateY(0) rotate(135deg);
-  background: var(--white);
-}
-.nav-toggler.toggle .l2 {
-  opacity: 0;
-}
-.nav-toggler.toggle .l3 {
-  transform: translateY(0) rotate(-135deg);
-  background: var(--white);
-}
+
+/* STYLE CONTACT */
 
 header {
-  position: fixed;
-  width: 25%;
-  height: 100%;
+  height: 20vh;
+  width: 100%;
+  position: absolute;
   top: 0;
-  right: -25%;
-  transition: 0.6s;
-  border-left: 2px solid var(--white);
-  backdrop-filter: blur(10px) brightness(0.5);
-  z-index: 5;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
 }
 header nav {
+  display: flex;
   width: 100%;
   height: 100%;
-  display: flex;
+  flex-flow: row wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
 }
-header nav ul {
-  width: 75%;
-  height: 50%;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: end;
-  justify-content: space-evenly;
+header nav .insta,
+header nav .vimeo {
+  width: 2em;
+  height: 2em;
+  margin: 0 50px 0 0;
 }
-header nav ul li {
-  list-style-type: none;
-  transition: 0.4s;
+header nav .insta {
+  background: url(./assets/icons/instagram.png) no-repeat center/cover;
 }
-header a {
-  color: var(--white);
-  font-size: 2.5em;
-  text-decoration: none;
-  transition: 0.4s;
-}
-header li:hover {
-  transform: translateY(10px);
-  cursor: pointer;
-}
-header li:hover a {
-  color: var(--blue);
-}
-.active {
-  right: 0;
+header nav .vimeo {
+  background: url(./assets/icons/vimeo.png) no-repeat center/cover;
 }
 
 /* STYLE SNIPPETS */
@@ -143,11 +98,9 @@ header li:hover a {
   align-items: center;
   justify-content: space-evenly;
   flex-flow: row wrap;
-  overflow: hidden;
+  overflow-y: hidden;
 }
-.first-snippet-container,
-.second-snippet-container,
-.third-snippet-container {
+.snippet-container {
   height: 200%;
   width: 33.33%;
   transition: cubic-bezier(0.79, 0.14, 0.15, 0.86) 0.8s;
@@ -155,17 +108,17 @@ header li:hover a {
 .first-snippet-img {
   width: 100%;
   height: 50%;
-  background: url(./assets/img/americanFootball.webp) no-repeat center/cover;
+  background: url(./assets/img/SUN05322.jpg) no-repeat center/cover;
 }
 .second-snippet-img {
   width: 100%;
   height: 50%;
-  background: url(./assets/img/basket.webp) no-repeat center/cover;
+  background: url(./assets/img/DSCF7307.jpg) no-repeat center/cover;
 }
 .third-snippet-img {
   width: 100%;
   height: 50%;
-  background: url(./assets/img/foot.webp) no-repeat center/cover;
+  background: url(./assets/img/DSCF7616.jpg) no-repeat center/cover;
 }
 .first-snippet-text,
 .second-snippet-text,
@@ -177,6 +130,7 @@ header li:hover a {
   justify-content: center;
   flex-flow: column nowrap;
 }
+
 h2 {
   font-size: 2.2em;
   font-weight: 300;
@@ -189,8 +143,36 @@ h6 {
   font-size: 1em;
   font-weight: 300;
 }
-.first-snippet-container:hover,
-.second-snippet-container:hover,
-.third-snippet-container:hover {
+.line1 .snippet-container:hover {
   transform: translateY(-50%);
 }
+
+/* 2E SECTION */
+
+.line2 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
+}
+.snippet-description {
+  width: 33.33%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+.snippet-img {
+  width: 66.66%;
+  height: 100%;
+  background: url(./assets/img/DSC06148.jpg) no-repeat center/cover;
+  filter: grayscale(100%);
+  transition: 1s;
+}
+.snippet-img:hover {
+  filter: grayscale(0);
+}
+
+/*  SLIDER  */
